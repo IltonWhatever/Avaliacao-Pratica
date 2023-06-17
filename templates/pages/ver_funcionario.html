@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block main %}
+
+    <ul>
+        <li>ID: {{funcionario[0][0]}}</li>
+        <li>Nome: {{funcionario[0][1]}}</li>
+        <li>CPF: {{funcionario[0][2]}}</li>
+        <li>Telefone: {{funcionario[0][3]}}</li>
+    </ul>
+    <p><a href="/edit_funcionario/{{funcionario[0][0]}}">Editar</a></p>
+    <p><a href="/delete_funcionario/{{funcionario[0][0]}}">Excluir</a></p>
+
+{% endblock %}

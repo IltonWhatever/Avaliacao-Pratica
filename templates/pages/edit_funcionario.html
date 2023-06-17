@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block main %}
+
+<form method="POST" action="{{url_for('edit', id=id)}}">
+<!--<form method="PUT" action="{{url_for('edit', id=id)}}"></form> -->
+    <input type="hidden" name="_method" value="PUT">
+    <label for="name">Nome:</label><br>
+    <input type="text" name="name" placeholder="{{funcionario[0][1]}}"> <br>
+    <label for="cpf">CPF:</label><br>
+    <input type="text" name="cpf" placeholder="{{funcionario[0][2]}}"> <br>
+    <label for="telefone">Telefone:</label><br>
+    <input type="text" name="telefone"  placeholder="{{funcionario[0][3]}}"> <br>
+    <input type="submit" value="Editar">
+
+</form>
+
+{% endblock %}
